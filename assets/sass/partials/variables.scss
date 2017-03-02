@@ -1,0 +1,57 @@
+/* Global items */
+/* Colors */
+$clr-link: 					rgba(240, 245, 250, 0.6);
+$clr-link-hover: 			rgba(240, 245, 250, 0.8);
+$clr-white: 				rgb(255, 255, 255);
+$clr-white-dark: 			rgb(217, 217, 217);
+$clr-black: 				rgb(0, 0, 0);
+$clr-pearl:					rgb(237, 237, 237);
+$clr-pearl-light:			rgb(253, 253, 253);
+$clr-pearl-dark:			rgb(201, 201, 201);
+$clr-silver:				rgb(215, 216, 214);
+$clr-silver-light:			rgb(231, 231, 230);
+$clr-silver-dark:			rgb(183, 182, 183);
+$clr-slate:					rgb(62, 80, 93); // #3E505D
+$clr-slate-dark:			rgb(37, 48, 56); // #253038
+$clr-slate-dark-black:		rgb(29, 38, 44); // #1D262C
+$clr-slate-dark-white:		rgb(69, 78, 85); // #454E55
+$clr-slate-light:			rgb(77, 100, 116); // #4D6474
+$clr-pewter:				rgb(146, 146, 146);
+$clr-pewter-light:			rgb(167, 167, 167);
+$clr-graphite:				rgb(64, 64, 64);
+
+/* Typography */
+$type-7:					7px;
+$type-8:					8px;
+$type-9:					9px;
+$type-10:					10px;
+$type-12:					12px;
+$type-14:					14px;
+$type-16:					16px;
+$type-18:					18px;
+$type-20:					20px;
+$type-22:					22px;
+$type-25:					25px;
+$type-30:					30px;
+$type-35:					35px;
+
+/* Header */
+$header-height: 			50px;
+$header-height-sm: 			98px;
+$header-bg:					rgb(3, 59, 56); // #033b38
+$header-user-dd-bg:			rgb(0, 79, 75); // #004F4B
+$notification-message-bg:	rgb(0, 166, 90);
+$notification-bg-hvr:		rgb(0, 133, 128); // #008580
+$ntf-message-clr:			rgb(0, 166, 90);
+$ntf-message-clr-hvr:		rgb(0, 133, 128);
+
+/* Sidebar */
+$sidebar-width:				230px;
+$sidebar-sm-width:			50px;
+$sidebar-bg:				rgb(0, 79, 75); // #004F4B
+$sidebar-menu-head-bg:		rgb(0, 113, 108); // #00716C
+$sidebar-menu-dd-bg:		rgb(0, 94, 89); // #005E59
+
+/* Main content */
+$content-bg:				rgb(238, 240, 240); // #eef0f0
+$box-card-toolbar-width:	25px;
