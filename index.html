@@ -13,6 +13,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300" type="text/css">
 		<!-- CSS -->
 		<link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
+		<!-- <link rel="stylesheet" href="assets/css/datatables.min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/autoFill.bootstrap4.min.css" type="text/css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" type="text/css">
 	</head>
 	<body>
@@ -315,25 +319,25 @@
 							</div>
 						</div>
 						<div class="row card-sortable">							
-							<div class="col-12 col-sm-6 card-wrapper">
+							<div class="col-12 col-sm-12 col-md-12 card-wrapper">
 								<div class="card card-draggable">
 									<div class="card-header p-0" role="tab" id="headingOne">
 										<h5 class="d-inline-block mb-0 float-left">
-											Collapsible Group Item #1
+											Recent Order
 										</h5>
-										<a class="float-right d-inline-block" href="#">
+										<a class="float-right d-inline-block text-right" href="#">
 											<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 										</a>
 										<ul class="list-unstyled list-inline float-right mb-0 more-buttons">
-											<li class="list-inline-item card-drag">
+											<li class="card-drag" data-toggle="tooltip" data-placement="left" title="Move widgets">
 												<a class="d-block text-center" href="#"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
 											</li>
-											<li class="list-inline-item">
+											<li class="" data-toggle="tooltip" data-placement="left" title="Minimize widgets">
 												<a id="btn-card-mm-1" class="d-block text-center btn-card-mm" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 													<i class="fa fa-minus" aria-hidden="true"></i>
 												</a>
 											</li>
-											<li class="list-inline-item">
+											<li class="" data-toggle="tooltip" data-placement="left" title="Remove widgets">
 												<a id="btn-card-remove-1" class="d-block text-center btn-card-remove" href="#">
 													<i class="fa fa-times" aria-hidden="true"></i>
 												</a>
@@ -343,28 +347,68 @@
 
 									<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
 										<div class="card-block">
-										Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+											<table id="order-table" data-toggle="table"
+										       data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1"
+										       data-sort-name="stargazers_count" data-show-columns="true" data-search="true" 
+										       data-query-params="queryParams" data-pagination="true" data-height="500"
+										       data-show-refresh="true" data-sort-order="desc" data-mobile-responsive="true"
+										       data-click-to-select="true" data-icons="icons"
+										       data-show-export="true" data-export-options='{
+											         "fileName": "testo", 
+											         "worksheetName": "test1",         
+											         "jspdf": {                  
+											           "autotable": {
+											             "styles": { "rowHeight": 20, "fontSize": 10 },
+											             "headerStyles": { "fillColor": 255, "textColor": 0 },
+											             "alternateRowStyles": { "fillColor": [60, 69, 79], "textColor": 255 }
+											           }
+											         }
+											         }'>
+												<thead>
+												    <tr>
+												        <th data-field="name" 
+												            data-sortable="true">
+												                Name
+												        </th>
+												        <th data-field="stargazers_count" 
+												            data-sortable="true">
+												                Stars
+												        </th>
+												        <th data-field="forks_count" 
+												            data-sortable="true">
+												                Forks
+												        </th>
+												        <th data-field="description" 
+												            data-sortable="true">
+												                Description
+												        </th>
+												    </tr>
+												</thead>
+											</table>
 										</div>
 									</div>
 								</div>
 							</div>
-							<!-- <div class="col-12 col-sm-6 card-wrapper">
+							<div class="col-12 col-sm-6 col-md-4 card-wrapper">
 								<div class="card card-draggable">
-									<div class="card-header" role="tab" id="headingOne">
-										<h5 class="d-inline-block mb-0">
+									<div class="card-header p-0" role="tab" id="headingTwo">
+										<h5 class="d-inline-block mb-0 float-left">
 											Collapsible Group Item #2
 										</h5>
-										<ul class="list-unstyled list-inline">
-											<li class="list-inline-item card-drag">
+										<a class="float-right d-inline-block text-right" href="#">
+											<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+										</a>
+										<ul class="list-unstyled list-inline float-right mb-0 more-buttons">
+											<li class="card-drag" data-toggle="tooltip" data-placement="left" title="Move widgets">
 												<a class="d-block text-center" href="#"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
 											</li>
-											<li class="list-inline-item">
-												<a id="btn-card-mm-2" class="d-block text-center btn-card-mm" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+											<li class="" data-toggle="tooltip" data-placement="left" title="Minimize widgets">
+												<a id="btn-card-mm-1" class="d-block text-center btn-card-mm" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
 													<i class="fa fa-minus" aria-hidden="true"></i>
 												</a>
 											</li>
-											<li class="list-inline-item">
-												<a id="btn-card-remove-2" class="d-block text-center btn-card-remove" href="#">
+											<li class="" data-toggle="tooltip" data-placement="left" title="Remove widgets">
+												<a id="btn-card-remove-1" class="d-block text-center btn-card-remove" href="#">
 													<i class="fa fa-times" aria-hidden="true"></i>
 												</a>
 											</li>
@@ -377,17 +421,8 @@
 										</div>
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
-						<p>
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-						</p>
-						<p>
-							It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-						</p>
-						<p>
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-						</p>
 					</div>
 				</div>
 			</div>
@@ -396,10 +431,15 @@
 
 		<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<!-- <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+		<script type="text/javascript" src="assets/js/dataTables.bootstrap4.min.js"></script>
+		<script type="text/javascript" src="assets/js/autoFill.bootstrap4.min.js"></script> -->
 		<script type="text/javascript" src="assets/js/jquery.slimscroll.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.sparkline.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.sparkline.min.js"></script>		
 		<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script> -->
 		<script type="text/javascript" src="assets/js/main.js"></script>
 
 	</body>

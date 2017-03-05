@@ -143,8 +143,37 @@
     	cardRemove();
 
         $('.card-header > a').on('click', function() {
-            $('.card-header > ul').slideToggle('slow');
+            $(this).next('ul').slideToggle('slow');
         });
+
+        /* Initiate dataTable */
+        // $('#order-table').DataTable( {
+        //     autoFill: true
+        // });
+
+        $('#order-table').bootstrapTable({
+            formatLoadingMessage: function () {
+                return '<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif" />';
+            }
+        });
+        $("#order-table").bootstrapTable("showLoading");
+        function queryParams() {
+            return {
+                type: 'owner',
+                sort: 'updated',
+                direction: 'desc',
+                per_page: 100,
+                page: 1
+            };
+        }
+        window.icons = {
+            refresh: 'fa-refresh',
+            toggle: 'fa-toggle-on',
+            columns: 'fa-th-list'
+        };
+
+        /* Initiate tooltip */
+        $('[data-toggle="tooltip"]').tooltip();
 
     	// Add slideDown animation to Bootstrap dropdown when expanding.
 		$('.dropdown').on('show.bs.dropdown', function() {
