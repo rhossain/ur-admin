@@ -142,6 +142,10 @@
     	}
     	cardRemove();
 
+        $('.card-header > a').on('click', function() {
+            $('.card-header > ul').slideToggle('slow');
+        });
+
     	// Add slideDown animation to Bootstrap dropdown when expanding.
 		$('.dropdown').on('show.bs.dropdown', function() {
 			$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
