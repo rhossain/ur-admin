@@ -1,4 +1,5 @@
 http://themes.laborator.co/#theme=neon
+http://lbd-pro-angular2.creative-tim.com/#/tables/bootstrap-table
 http://coderthemes.com/adminto_1.5/light/index.html
 http://preview.themeforest.net/item/unix-bootstrap-admin-kit/full_screen_preview/19344909
 http://keenthemes.com/preview/metronic/

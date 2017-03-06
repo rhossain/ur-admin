@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ADMIN</title>
+		<meta name="description" content="Admin template">
+		<meta name="author" content="MD. Sazzad Hossain Robin">
+		<meta name="keywords" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,300" type="text/css">
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/jquery-ui.min.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+		<link rel="stylesheet" href="assets/css/main.css" type="text/css">
+	</head>
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<table id="order-table" data-toggle="table"
+				       data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1"
+				       data-sort-name="stargazers_count" data-show-columns="true" data-search="true" 
+				       data-query-params="queryParams" data-pagination="true" data-height="500"
+				       data-show-refresh="true" data-sort-order="desc" data-mobile-responsive="true"
+				       data-click-to-select="true" data-icons="icons"
+				       data-show-export="true" data-export-options='{
+					         "fileName": "testo", 
+					         "worksheetName": "test1",         
+					         "jspdf": {                  
+					           "autotable": {
+					             "styles": { "rowHeight": 20, "fontSize": 10 },
+					             "headerStyles": { "fillColor": 255, "textColor": 0 },
+					             "alternateRowStyles": { "fillColor": [60, 69, 79], "textColor": 255 }
+					           }
+					         }
+					         }'>
+						<thead>
+						    <tr>
+						        <th data-field="name" 
+						            data-sortable="true">
+						                Name
+						        </th>
+						        <th data-field="stargazers_count" 
+						            data-sortable="true">
+						                Stars
+						        </th>
+						        <th data-field="forks_count" 
+						            data-sortable="true">
+						                Forks
+						        </th>
+						        <th data-field="description" 
+						            data-sortable="true">
+						                Description
+						        </th>
+						    </tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<!-- <script type="text/javascript" src="assets/js/datatables.min.js"></script>
+		<script type="text/javascript" src="assets/js/dataTables.bootstrap4.min.js"></script>
+		<script type="text/javascript" src="assets/js/autoFill.bootstrap4.min.js"></script> -->
+		<script type="text/javascript" src="assets/js/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.sparkline.min.js"></script>		
+		<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script> -->
+		<script type="text/javascript" src="assets/js/main.js"></script>
+
+	</body>
+</html>

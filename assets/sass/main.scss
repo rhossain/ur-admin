@@ -143,6 +143,137 @@ a {
   	@include box-sizing(content-box);
 }
 
+.bootstrap-table {
+	.fixed-table-toolbar {
+		.columns {
+			.btn {
+				padding: 8px 7px;
+				background-color: transparent;
+				cursor: pointer;
+
+				&:focus {
+					// @include box-shadow(none);
+					-webkit-box-shadow: none;
+					-moz-box-shadow: none;
+					box-shadow: none;
+					border-bottom: 1px $sidebar-menu-head-bg solid;
+				}
+			}
+
+			.dropdown-toggle {
+				&:after {
+					margin-top: 7px;
+					margin-left: 0;
+					vertical-align: top;
+				}
+			}
+		}
+	}
+
+	.pagination {
+		font-size: $type-14;
+
+		li {
+			a {
+
+			}
+		}
+	}
+
+	.pagination-detail {
+		font-size: $type-14;
+
+		.pagination-info {
+			display: none;
+		}
+	}
+
+	.page-list {
+		.dropdown-toggle {
+			padding: 0;
+			background-color: transparent;
+			font-weight: 700;
+			font-size: $type-14;
+			cursor: pointer;
+			@include border-radius(0);
+
+			&:focus {
+				// @include box-shadow(none);
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				border-bottom: 1px $sidebar-menu-head-bg solid;
+			}
+
+			&:after {
+				margin-top: 6px;
+				margin-left: 0;
+				vertical-align: top;
+			}
+		}
+
+		.dropdown-menu {
+			min-width: 25px;
+
+			li {
+				text-align: center;
+
+				a {
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+}
+
+.card-wrapper {
+	margin-top: 15px;
+
+	.card {
+		.card-header {
+			background-color: $clr-white;
+			border: 0;
+
+			h5 {
+				width: 85%;
+				padding: 12px 15px;
+				background-color: $sidebar-menu-head-bg;
+				color: $clr-white;
+				font-size: $type-18;
+				@include border-bottom-right-radius(45px);
+			}
+
+			> a {
+				width: 15%;
+				padding: 9px 14px;
+			}
+
+			ul {
+				display: none;
+				position: absolute;
+				right: 5px;
+				top: 40px;
+				background-color: $clr-white;
+				z-index: 10;
+				
+				li {
+					font-size: $type-14;
+
+					a {
+						padding: 5px;
+
+						i {
+							&.fa-arrows-alt {
+								font-size: $type-12;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 .top-header {
     height: $header-height;
     // position: relative;
@@ -708,53 +839,6 @@ a {
 
 				&:last-child {
 					border-bottom: 0;
-				}
-			}
-		}
-	}
-}
-
-.card-wrapper {
-	margin-top: 15px;
-
-	.card {
-		.card-header {
-			background-color: $clr-white;
-			border: 0;
-
-			h5 {
-				width: 85%;
-				padding: 12px 15px;
-				background-color: $sidebar-menu-head-bg;
-				color: $clr-white;
-				font-size: $type-18;
-				@include border-bottom-right-radius(45px);
-			}
-
-			> a {
-				width: 15%;
-				padding: 9px 14px;
-			}
-
-			ul {
-				display: none;
-				position: absolute;
-				right: 5px;
-				top: 40px;
-				background-color: $clr-white;
-				
-				li {
-					font-size: $type-14;
-
-					a {
-						padding: 5px;
-
-						i {
-							&.fa-arrows-alt {
-								font-size: $type-12;
-							}
-						}
-					}
 				}
 			}
 		}
