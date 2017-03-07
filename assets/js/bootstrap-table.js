@@ -1114,8 +1114,8 @@
 
                 if (column.switchable) {
                     html.push(sprintf('<li>' +
-                        '<label><input type="checkbox" data-field="%s" value="%s"%s> %s</label>' +
-                        '</li>', column.field, i, checked, column.title));
+                        '<div class="squaredCheckbox"><input type="checkbox" id="%s" data-field="%s" value="%s"%s><label for="%s"><span>%s</span></label></div>' +
+                        '</li>', column.field, column.field, i, checked, column.field, column.title));
                     switchableCount++;
                 }
             });

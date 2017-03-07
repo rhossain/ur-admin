@@ -325,9 +325,14 @@
 										<h5 class="d-inline-block mb-0 float-left">
 											Recent Order
 										</h5>
-										<a class="float-right d-inline-block text-right" href="javascript:void(0)">
+										<div class="float-right d-inline-block text-right">
+											<a class="float-right d-inline-block text-right" href="javascript:void(0)">
+												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+											</a>
+										</div>
+										<!-- <a class="float-right d-inline-block text-right" href="javascript:void(0)">
 											<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-										</a>
+										</a> -->
 										<ul class="list-unstyled list-inline float-right mb-0 more-buttons">
 											<li class="card-drag" data-toggle="tooltip" data-placement="left" title="Move widgets">
 												<a class="d-block text-center" href="javascript:void(0)"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a>
@@ -347,11 +352,10 @@
 
 									<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
 										<div class="card-block">
-											<table id="order-table" data-toggle="table"
-										       data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1"
-										       data-sort-name="stargazers_count" data-show-columns="true" data-search="true" 
+											<table id="recentOrder" class="table table-striped" data-toggle="table"
+										       data-sort-name="code" data-show-columns="true" data-search="true" 
 										       data-query-params="queryParams" data-pagination="true" data-height="500"
-										       data-show-refresh="true" data-sort-order="desc" data-mobile-responsive="true"
+										       data-show-refresh="true" data-sort-order="asc" data-mobile-responsive="true"
 										       data-click-to-select="true" data-show-export="true"
 										       data-export-types="['csv', 'excel', 'json', 'pdf', 'txt', 'xml']" 
 										       data-export-options='{
@@ -367,24 +371,234 @@
 										       	}'>
 												<thead>
 												    <tr>
+												        <th data-field="code" 
+												            data-sortable="true">
+												                Product Code
+												        </th>
 												        <th data-field="name" 
 												            data-sortable="true">
-												                Name
+												                Product Name
 												        </th>
-												        <th data-field="stargazers_count" 
+												        <th data-field="price" 
 												            data-sortable="true">
-												                Stars
+												                Price
 												        </th>
-												        <th data-field="forks_count" 
+												        <th data-field="status" 
 												            data-sortable="true">
-												                Forks
+												                Status
 												        </th>
-												        <th data-field="description" 
+												        <th data-field="quantity" 
 												            data-sortable="true">
-												                Description
+												                Quantity
+												        </th>
+												        <th data-field="purchased" 
+												            data-sortable="true">
+												                Purchased On
 												        </th>
 												    </tr>
 												</thead>
+												<tbody>
+													<tr id="tr-id-1" class="tr-class-1">
+														<td id="td-id-1" class="td-class-1">
+															PC0001
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>5</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-2" class="tr-class-2">
+														<td id="td-id-2" class="td-class-2">
+															PC0002
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>2</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-3" class="tr-class-3">
+														<td id="td-id-3" class="td-class-3">
+															PC0003
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-warning">Pending</span></td>
+														<td>4</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-4" class="tr-class-4">
+														<td id="td-id-4" class="td-class-4">
+															PC0004
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>4</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-5" class="tr-class-5">
+														<td id="td-id-5" class="td-class-5">
+															PC0005
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-danger">Failed</span></td>
+														<td>7</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-6" class="tr-class-6">
+														<td id="td-id-6" class="td-class-6">
+															PC0006
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>3</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-7" class="tr-class-7">
+														<td id="td-id-7" class="td-class-7">
+															PC0007
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-warning">Pending</span></td>
+														<td>3</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-8" class="tr-class-8">
+														<td id="td-id-8" class="td-class-8">
+															PC0008
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-warning">Pending</span></td>
+														<td>2</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-9" class="tr-class-9">
+														<td id="td-id-9" class="td-class-9">
+															PC0009
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>8</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-10" class="tr-class-10">
+														<td id="td-id-10" class="td-class-10">
+															PC0010
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>4</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-11" class="tr-class-11">
+														<td id="td-id-11" class="td-class-11">
+															PC0011
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>7</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-12" class="tr-class-12">
+														<td id="td-id-12" class="td-class-12">
+															PC0012
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-warning">Pending</span></td>
+														<td>2</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-13" class="tr-class-13">
+														<td id="td-id-13" class="td-class-13">
+															PC0013
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>2</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-14" class="tr-class-14">
+														<td id="td-id-14" class="td-class-14">
+															PC0014
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>5</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-15" class="tr-class-15">
+														<td id="td-id-15" class="td-class-15">
+															PC0015
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>4</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-16" class="tr-class-16">
+														<td id="td-id-16" class="td-class-16">
+															PC0016
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-danger">Failed</span></td>
+														<td>3</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-17" class="tr-class-17">
+														<td id="td-id-17" class="td-class-17">
+															PC0017
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>9</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-18" class="tr-class-18">
+														<td id="td-id-18" class="td-class-18">
+															PC0018
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>4</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-19" class="tr-class-19">
+														<td id="td-id-19" class="td-class-19">
+															PC0019
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-danger">Failed</span></td>
+														<td>2</td>
+														<td>27 Sep 2016</td>
+													</tr>
+													<tr id="tr-id-20" class="tr-class-20">
+														<td id="td-id-20" class="td-class-20">
+															PC0020
+														</td>
+														<td>Leisure Suit Casual</td>
+														<td>$99.00</td>
+														<td><span class="badge badge-success">Paid</span></td>
+														<td>4</td>
+														<td>27 Sep 2016</td>
+													</tr>
+												</tbody>
 											</table>
 										</div>
 									</div>
@@ -396,9 +610,11 @@
 										<h5 class="d-inline-block mb-0 float-left">
 											Collapsible Group Item #2
 										</h5>
-										<a class="float-right d-inline-block text-right" href="javascript:void(0)">
-											<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-										</a>
+										<div class="float-right d-inline-block text-right">
+											<a class="float-right d-inline-block text-right" href="javascript:void(0)">
+												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+											</a>
+										</div>
 										<ul class="list-unstyled list-inline float-right mb-0 more-buttons">
 											<li class="card-drag" data-toggle="tooltip" data-placement="left" title="Move widgets">
 												<a class="d-block text-center" href="javascript:void(0)"><i class="fa fa-arrows-alt" aria-hidden="true"></i></a>

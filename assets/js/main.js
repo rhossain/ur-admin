@@ -28,7 +28,8 @@
  			headerUserWidth = $('.header-nav-user').width(),
  			searchWidth = headerWidth - (headerLeftWidth + headerOptionsWidth + headerUserWidth),
  			searchWidthSm = headerLeftWidth - (headerOptionsWidth + headerUserWidth),
- 			sideMenu = $('ul.side-menu');
+ 			sideMenu = $('ul.side-menu'),
+            selectClass;
 
  		accordionHead
  			.first()
@@ -82,6 +83,16 @@
     		disableFadeOut: false,
     		railVisible: true
     	});
+        // $('.fixed-table-body').slimScroll({
+        //     height: '300px',
+        //     size: '5px',
+        //     color: '#253038',
+        //     alwaysVisible: false,
+        //     distance: '3px',
+        //     disableFadeOut: false,
+        //     railVisible: false,
+        //     axis: 'both'
+        // });
 
     	// var toggleMainMenu = function() {
     	// 	if(window.matchMedia('(max-width: 767px)').matches) {
@@ -144,8 +155,8 @@
     	}
     	cardRemove();
 
-        $('.card-header > a').on('click', function() {
-            $(this).next('ul').slideToggle('slow');
+        $('.card-header > div > a').on('click', function() {
+            $(this).parent('div').next('ul').slideToggle('slow');
         });
 
         /* Initiate dataTable */
@@ -153,21 +164,21 @@
         //     autoFill: true
         // });
 
-        $('#order-table').bootstrapTable({
-            formatLoadingMessage: function () {
-                return '<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif" />';
-            }
-        });
-        $("#order-table").bootstrapTable("showLoading");
-        function queryParams() {
-            return {
-                type: 'owner',
-                sort: 'updated',
-                direction: 'desc',
-                per_page: 100,
-                page: 1
-            };
-        }
+        // $('#order-table').bootstrapTable({
+        //     formatLoadingMessage: function () {
+        //         return '<img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif" />';
+        //     }
+        // });
+        // $("#order-table").bootstrapTable("showLoading");
+        // function queryParams() {
+        //     return {
+        //         type: 'owner',
+        //         sort: 'updated',
+        //         direction: 'desc',
+        //         per_page: 100,
+        //         page: 1
+        //     };
+        // }
         $( 'div.bootstrap-table .pull-right.search' ).switchClass( "pull-right", "float-left", 200, "easeInOutQuad" );
         $( 'div.bootstrap-table button > i.icon-refresh' ).switchClass( "glyphicon glyphicon-refresh", "fa fa-refresh", 200, "easeInOutQuad" );
         $( 'div.bootstrap-table button > i.icon-th' ).switchClass( "glyphicon glyphicon-refresh", "fa fa-th-list", 200, "easeInOutQuad" );
@@ -185,6 +196,48 @@
 		$('.dropdown').on('hide.bs.dropdown', function() {
 			$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
 		});
+
+        $.fn.dropdownAnimate = function(selectClass) {
+            $(selectClass).on('click', '.dropdown-toggle', function() {
+                var ddMenu = $(selectClass).find('.dropdown-menu');
+                if(ddMenu.is(':visible')) {
+                    $(ddMenu).first().stop(true, true).slideUp();
+                } else {
+                    $(ddMenu).first().stop(true, true).slideDown();
+                }            
+            });
+        };
+        $(window).dropdownAnimate('.keep-open');
+        $(window).dropdownAnimate('.export');
+
+        // $('.keep-open').on('click', '.dropdown-toggle', function() {
+        //     var ddMenu = $('.keep-open').find('.dropdown-menu');
+        //     if(ddMenu.is(':visible')) {
+        //         console.log('CLOSE clicked');
+        //         // $(ddMenu).addClass('opened');
+        //         // $(ddMenu).removeClass('closed');
+        //         $(ddMenu).first().stop(true, true).slideUp();
+        //     } else {
+        //         console.log('OPEN clicked');
+        //         // $(ddMenu).addClass('closed');
+        //         // $(ddMenu).removeClass('opened');
+        //         $(ddMenu).first().stop(true, true).slideDown();
+        //     }            
+        // });
+        // $('.export .dropdown-toggle').on('click', function() {
+        //     var ddMenu = $('.export .dropdown-menu');
+        //     if(ddMenu.is(':visible')) {
+        //         console.log('CLOSE clicked');
+        //         // $(ddMenu).addClass('opened');
+        //         // $(ddMenu).removeClass('closed');
+        //         $(ddMenu).first().stop(true, true).slideUp();
+        //     } else {
+        //         console.log('OPEN clicked');
+        //         // $(ddMenu).addClass('closed');
+        //         // $(ddMenu).removeClass('opened');
+        //         $(ddMenu).first().stop(true, true).slideDown();
+        //     }            
+        // });
     });
 
 }(jQuery));
