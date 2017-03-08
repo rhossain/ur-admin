@@ -209,6 +209,39 @@
         };
         $(window).dropdownAnimate('.keep-open');
         $(window).dropdownAnimate('.export');
+        $(window).dropdownAnimate('.dropup');
+
+        $("#taskToDO").todoList({
+            title: "Tasks to Do",
+            items: [
+                {
+                    title: 'todo 1 <span>13:50 27-03-2016</span>',
+                    done: false
+                },
+                {
+                    title: 'todo 2 <span>13:50 27-03-2016</span>',
+                    done: false
+                },
+                {
+                    title: 'todo 3 <span>13:50 27-03-2016</span>',
+                    done: true
+                },
+                {
+                    title: 'todo 4 <span>13:50 27-03-2016</span>',
+                    done: false
+                },
+                {
+                    title: 'todo 5 <span>13:50 27-03-2016</span>',
+                    done: false
+                }
+            ]
+        });
+        $( ".jquery-todolist-items" ).sortable({
+            // connectWith: ".jquery-todolist-items",
+            // handle: ".jquery-todolist-item",
+            containment: ".jquery-todolist"
+        });
+        // $( ".jquery-todolist-items" ).disableSelection();
 
         // $('.keep-open').on('click', '.dropdown-toggle', function() {
         //     var ddMenu = $('.keep-open').find('.dropdown-menu');

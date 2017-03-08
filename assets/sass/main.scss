@@ -316,6 +316,29 @@ a {
 	}
 }
 
+.jquery-todolist {
+	.jquery-todolist-title {
+		display: none;
+	}
+
+	.jquery-todolist-items {
+		.jquery-todolist-item {
+			.ui-state-default {
+				.jquery-todolist-item-title {
+
+				}
+				.jquery-todolist-item-title-text {
+					
+				}
+			}
+		}
+	}
+
+	.jquery-todolist-footer {
+
+	}
+}
+
 .card-wrapper {
 	margin-top: 15px;
 
