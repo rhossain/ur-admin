@@ -239,8 +239,14 @@
         $( ".jquery-todolist-items" ).sortable({
             // connectWith: ".jquery-todolist-items",
             // handle: ".jquery-todolist-item",
-            containment: ".jquery-todolist"
+            // containment: ".jquery-todolist"
+            helper: 'clone'
         });
+        // $('.draggable').disableSelection();
+
+        // $('.draggable').draggable({
+        //     connectToSortable : '.jquery-todolist-items'
+        // });
         // $( ".jquery-todolist-items" ).disableSelection();
 
         // $('.keep-open').on('click', '.dropdown-toggle', function() {
